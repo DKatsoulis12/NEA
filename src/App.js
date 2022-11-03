@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './App.scss';
 
-function App() {
+import Layout from './Pages/Layout';
+import Home from './Pages/Home';
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        {/* All of the other pages are indented so that the header and footer from the layout page is always on the top and bottom respectively of every page */}
+        <Route index element={<Home />} />
+      </Route>
+    </Routes>
+  </BrowserRouter>
   );
 }
 
-export default App;
+
