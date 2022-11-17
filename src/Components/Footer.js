@@ -31,6 +31,7 @@ export default function Footer() {
               height="300"
               style={{ border: 0 }}
               allowFullScreen=""
+              // The frame will not be loaded until the user scrolls near it 
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
