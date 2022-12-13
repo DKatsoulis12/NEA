@@ -3,6 +3,10 @@ import './App.scss';
 
 import Layout from './Pages/Layout';
 import Home from './Pages/Home';
+import NoPage from './Pages/NoPage';
+import Login from './Pages/Login';
+import Signup from './Pages/Signup';
+import Signout from './Pages/Signout';
 
 export default function App() {
   return (
@@ -12,6 +16,11 @@ export default function App() {
       <Route path="/" element={<Layout />}>
         {/* All of the other pages are indented so that the header and footer from the layout page is always on the top and bottom respectively of every page */}
         <Route index element={<Home />} />
+        <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/signout" element={<Signout />} />
+
+          <Route path="*" element={<NoPage />} />
       </Route>
     </Routes>
   </BrowserRouter>
