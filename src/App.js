@@ -4,6 +4,7 @@ import './App.scss';
 import Layout from './Pages/Layout';
 import Home from './Pages/Home';
 import Shop from './Pages/Shop';
+import Checkout from './Pages/Checkout';
 import NoPage from './Pages/NoPage';
 import Login from './Pages/Login';
 import Signup from './Pages/Signup';
@@ -19,6 +20,7 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/shop" element={<Shop />} />
+        <Route path="/checkout" element={<Checkout />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/signout" element={<Signout />} />
         <Route path="*" element={<NoPage />} />
