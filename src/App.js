@@ -7,6 +7,7 @@ import Shop from './Pages/Shop';
 import Checkout from './Pages/Checkout';
 import NoPage from './Pages/NoPage';
 import Login from './Pages/Login';
+import Thankyou from './Pages/Thankyou';
 import Signup from './Pages/Signup';
 import Signout from './Pages/Signout';
 
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/thankyou" element={<Thankyou />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/signout" element={<Signout />} />
         <Route path="*" element={<NoPage />} />
