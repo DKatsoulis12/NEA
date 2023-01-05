@@ -4,6 +4,7 @@ import { Row, Col } from 'react-bootstrap';
 
 import classes from './Banner.module.scss';
 
+// Welcome message inside Home page
 export default function Banner() {
   const navigate = useNavigate();
   return (

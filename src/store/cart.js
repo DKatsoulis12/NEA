@@ -36,7 +36,8 @@ export const { setCart, setTotal, setErrors, clearErrors, setLoading } =
   cartSlice.actions;
 
 // --------------------------------------------------------
-
+// The response from the following API will be stored in Redux store, so that it will be accessible from any component. In this case it is used by the components 
+//Cart.js, Product.js and Purchase.js
 export const getCartItems = () => async (dispatch) => {
   try {
     dispatch(setLoading(true));
@@ -63,6 +64,7 @@ export const getCartItems = () => async (dispatch) => {
 export const addToCart = (id) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
+    //Another API that adds a new item in the cart
     await axiosInstance({
       url: '/api/cart/add-item',
       method: 'POST',
@@ -86,6 +88,7 @@ export const addToCart = (id) => async (dispatch) => {
 export const removeFromCart = (id) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
+    // This API removes items from the cart
     await axiosInstance({
       url: '/api/cart/remove-item',
       method: 'POST',

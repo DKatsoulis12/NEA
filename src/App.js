@@ -13,7 +13,7 @@ import Signout from './Pages/Signout';
 
 export default function App() {
   return (
-
+    //The router is used to achieve a single-page application
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Layout />}>

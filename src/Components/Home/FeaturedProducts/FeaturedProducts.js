@@ -12,6 +12,7 @@ export default function FeaturedProducts() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    // API fetching featured products from database
     const fetchProducts = async () => {
       await dispatch(getFeaturedProducts());
     };
@@ -23,6 +24,7 @@ export default function FeaturedProducts() {
     };
   }, [dispatch]);
 
+  // Getting state from Redux store
   const { featuredProducts, errors, isLoading } = useSelector(
     (state) => state.product
   );
@@ -40,6 +42,7 @@ export default function FeaturedProducts() {
       {!isLoading && errors.length === 0 && (
         <Container>
           <div className={classes.featured}>
+            {/* Maps each element of array featuredProducts into an appropriate div  */}
             {featuredProducts?.map((product) => (
               <div
                 className="card m-2 d-flex align-items-center justify-content-center position-relative"
